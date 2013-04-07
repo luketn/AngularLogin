@@ -5,7 +5,7 @@
  * Date: 8/04/13
  * Time: 4:57 AM
  */
-app.controller('HomeController', function($scope, LoginService){
+function HomeController($scope, LoginService){
     $scope.loggedIn = false;
     $scope.loggedInUsername = "";
 
@@ -19,4 +19,4 @@ app.controller('HomeController', function($scope, LoginService){
             $scope.loggedInUsername = "";
         }
     });
-});
+}

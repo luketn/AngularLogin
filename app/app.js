@@ -9,7 +9,7 @@ var app = angular
     .module("login", ['ui.bootstrap'])
     .config(function($routeProvider) {
         $routeProvider.
-            when('/', {controller:dummyController, templateUrl:'app/home/home.html'}).
+            when('/', {controller:HomeController, templateUrl:'app/home/home.html'}).
             when('/change', {controller:dummyController, templateUrl:'app/change/change.html'}).
             when('/history', {controller:dummyController, templateUrl:'app/history/history.html'}).
             when('/about', {controller:dummyController, templateUrl:'app/about/about.html'}).
