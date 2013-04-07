@@ -5,18 +5,19 @@
  * Date: 7/04/13
  * Time: 10:38 AM
  */
-var app = angular
+angular
     .module("login", ['ui.bootstrap'])
     .config(function($routeProvider) {
         $routeProvider.
             when('/', {controller:HomeController, templateUrl:'app/home/home.html'}).
-            when('/change', {controller:dummyController, templateUrl:'app/change/change.html'}).
-            when('/history', {controller:dummyController, templateUrl:'app/history/history.html'}).
-            when('/about', {controller:dummyController, templateUrl:'app/about/about.html'}).
+            when('/change', {controller:DummyController, templateUrl:'app/change/change.html'}).
+            when('/history', {controller:DummyController, templateUrl:'app/history/history.html'}).
+            when('/about', {controller:DummyController, templateUrl:'app/about/about.html'}).
             otherwise({redirectTo:'/'});
     })
-    .service('LoginService', LoginService);
+    .service('LoginService', LoginService)
+    .directive('fuNavBar', fuNavBarDirective);
 
-function dummyController(){
+function DummyController(){
 
 }

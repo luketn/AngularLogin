@@ -1,4 +1,4 @@
-app.controller('LoginController', function ($scope, dialog, LoginService) {
+function LoginController($scope, dialog, LoginService) {
     $scope.showUsernamePasswordError = false;
     $scope.usernamePasswordErrorMessage = "";
     $scope.login = function () {
@@ -15,4 +15,4 @@ app.controller('LoginController', function ($scope, dialog, LoginService) {
     $scope.close = function () {
         dialog.close();
     };
-});
+}
