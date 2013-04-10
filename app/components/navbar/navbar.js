@@ -77,6 +77,9 @@ define(['components/login/login', 'components/login/register'],
                             $scope.menus = preLoggedInMenus;
                         }
                     });
+                },
+                link: function(scope, element, attrs){
+
                 }
             };
         }

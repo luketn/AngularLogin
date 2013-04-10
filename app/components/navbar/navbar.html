@@ -8,19 +8,21 @@
             </a>
             <a class="brand" href="#">LOGIN</a>
 
+            <div class="notices pull-right">
+                <form class="nav pull-right" action="" data-ng-hide="loggedIn">
+                    <input type="button" class="btn btn-link" value="Register" data-ng-click="register()">
+                    <input type="button" class="btn btn-link" value="Login" data-ng-click="login()">
+                </form>
+                <p class="navbar-text" data-ng-show="loggedIn">Welcome {{currentUsername}}&nbsp;&nbsp;&nbsp;<a href="#/" data-ng-click="logout()">Logout</a>&nbsp;&nbsp;</p>
+            </div>
+
             <div class="nav-collapse">
                 <ul class="nav">
                     <li data-ng-hi data-ng-repeat="menu in menus" class="{{menu.class}}"><a href="#{{menu.url}}">{{menu.name}}</a>
                     </li>
                 </ul>
-                <form class="nav pull-right" action="" data-ng-hide="loggedIn">
-                    <input type="button" class="btn btn-link" value="Register" data-ng-click="register()">
-                    <input type="button" class="btn btn-link" value="Login" data-ng-click="login()">
-                </form>
-                <form class="nav pull-right" action="" data-ng-show="loggedIn">
-                    <span class="welcomeMessage">Welcome {{currentUsername}}&nbsp;&nbsp;&nbsp;<a href="#/" data-ng-click="logout()">Logout</a></span>
-                </form>
             </div>
+
         </div>
     </div>
 </div>
