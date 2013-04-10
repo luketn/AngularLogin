@@ -6,27 +6,27 @@
  * Time: 7:53 PM
  */
 require.config({
-    map: {
-        '*': {
-            'css': 'lib/css'
+    map:{
+        '*':{
+            'css':'lib/css'
         }
     },
-    paths: {
+    paths:{
         //3rd party libraries
-        jQuery: 'lib/jquery.min',
-        angular: 'lib/angular',
-        bootstrap: 'http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-        angularBootstrap: 'lib/ui-bootstrap-tpls-0.2.0.min'
+        jQuery:'lib/jquery.min',
+        angular:'lib/angular.min',
+        bootstrap:'http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
+        angularBootstrap:'lib/ui-bootstrap-tpls-0.2.0.min'
     },
-    shim: {
-        angular: {
+    shim:{
+        angular:{
             exports:'angular'
         },
-        angularBootstrap: {
-            deps: ['jQuery','angular', 'bootstrap']
+        angularBootstrap:{
+            deps:['jQuery', 'angular', 'bootstrap']
         },
-        'app': {
-            deps: [
+        'app':{
+            deps:[
                 'components/login/login',
                 'components/login/register',
                 'components/login/loginservice',
@@ -34,16 +34,16 @@ require.config({
             ]
         }
     },
-    priority: [
+    priority:[
         'angular'
     ],
-    baseUrl: 'app'
+    baseUrl:'app'
 });
 
 //Bootstrap the app
 requirejs(['app'],
-    function(app) {
-        angular.element(document).ready(function() {
+    function (app) {
+        angular.element(document).ready(function () {
             angular.bootstrap(document, ['login']);
         });
     }

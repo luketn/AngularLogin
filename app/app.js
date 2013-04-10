@@ -6,7 +6,7 @@
  * Time: 10:38 AM
  */
 define(['components/home/home', 'components/navbar/navbar', 'components/login/loginservice', 'css!appcss/app', 'css!http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min'],
-    function (HomeController, FuNavBarDirective, LoginService) {
+    function (HomeController, NavBarDirective, LoginService) {
         function DummyController() {
 
         }
@@ -20,7 +20,7 @@ define(['components/home/home', 'components/navbar/navbar', 'components/login/lo
                     when('/about', {controller:DummyController, templateUrl:'app/components/about/about.html'}).
                     otherwise({redirectTo:'/'});
             })
-            .directive('fuNavBar', FuNavBarDirective)
+            .directive('fuNavBar', NavBarDirective)
             .service('LoginService', LoginService);
     }
 );
