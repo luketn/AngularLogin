@@ -27,9 +27,6 @@ require.config({
         },
         'app':{
             deps:[
-                'components/login/login',
-                'components/login/register',
-                'components/login/loginservice',
                 'angularBootstrap'
             ]
         }
@@ -42,7 +39,7 @@ require.config({
 
 //Bootstrap the app
 requirejs(['app'],
-    function (app) {
+    function () {
         angular.element(document).ready(function () {
             angular.bootstrap(document, ['login']);
         });

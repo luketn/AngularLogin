@@ -5,7 +5,7 @@
  * Date: 7/04/13
  * Time: 11:01 AM
  */
-define(['components/login/login', 'components/login/register'],
+define(['components/login/login', 'components/login/register', 'css!components/navbar/navbar'],
     function (LoginController, RegisterController) {
         return function ($location, $dialog, LoginService) {
             return {
@@ -79,7 +79,11 @@ define(['components/login/login', 'components/login/register'],
                     });
                 },
                 link: function(scope, element, attrs){
-
+                    scope.$on('$routeChangeStart', function(){
+                        $(element)
+                            .find('.btn-navbar:visible')
+                            .click();
+                    });;
                 }
             };
         }

@@ -5,7 +5,7 @@
  * Date: 7/04/13
  * Time: 10:38 AM
  */
-define(['components/home/home', 'components/navbar/navbar', 'components/login/loginservice', 'css!appcss/app', 'css!http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min'],
+define(['components/home/home', 'components/navbar/navbar', 'components/login/loginservice', 'css!http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min'],
     function (HomeController, NavBarDirective, LoginService) {
         function DummyController() {
 
