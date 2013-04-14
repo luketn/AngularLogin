@@ -18,7 +18,8 @@
 
             <div class="nav-collapse">
                 <ul class="nav">
-                    <li data-ng-hi data-ng-repeat="menu in menus" class="{{menu.class}}"><a href="#{{menu.url}}">{{menu.name}}</a>
+                    <li data-ng-repeat="menu in menus" class="{{menu.class}}">
+                        <a href="#{{menu.url}}">{{menu.name}}</a>
                     </li>
                 </ul>
             </div>
