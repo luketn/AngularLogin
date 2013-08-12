@@ -1,3 +1,10 @@
+/**
+ * Register Dialog Controller.
+ *
+ * User: luke
+ * Date: 12/04/13
+ * Time: 11:26 AM
+ */
 define(function () {
     return function ($scope, dialog, LoginService) {
         $scope.showUsernameError = false;
