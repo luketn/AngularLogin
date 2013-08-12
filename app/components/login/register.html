@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <h1>Register</h1>
+</div>
+<div class="modal-body">
+    <div class="row-fluid">
+        <div class="span12">
+            <form>
+                <div class="control-group" data-ng-class="{error: showUsernameError}">
+                    <label class="control-label" for="fu-register-username">Username</label>
+
+                    <div class="controls">
+                        <input type="text" id="fu-register-username" data-ng-model="username" class="span12"/>
+                    </div>
+                    <span class="help-inline" data-ng-show="showUsernameError">* {{usernameErrorMessage}}</span>
+                </div>
+                <div class="control-group" data-ng-class="{error: showPasswordError}">
+                    <label class="control-label" for="fu-register-password">Password</label>
+
+                    <div class="controls">
+                        <input type="password" id="fu-register-password" data-ng-model="password" class="span12">
+                    </div>
+                    <span class="help-inline" data-ng-show="showPasswordError">* {{passwordErrorMessage}}</span>
+                </div>
+                <div class="control-group" data-ng-class="{error: showPasswordError}">
+                    <label class="control-label" for="fu-register-passwordValidate">Re-enter password</label>
+
+                    <div class="controls">
+                        <input type="password" id="fu-register-passwordValidate" data-ng-model="passwordValidate" class="span12">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button data-ng-click="close()" class="btn">Cancel</button>
+    <button data-ng-click="register()" class="btn btn-primary">Register</button>
+</div>

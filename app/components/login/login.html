@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h1>Login</h1>
+</div>
+<div class="modal-body">
+    <div class="row-fluid">
+        <div class="span12">
+            <form>
+                <div class="control-group" data-ng-class="{error: showUsernamePasswordError}">
+                    <label class="control-label" for="fu-login-username">Username</label>
+                    <div class="controls">
+                        <input type="text" id="fu-login-username" data-ng-model="username" class="span12">
+                    </div>
+                </div>
+                <div class="control-group" data-ng-class="{error: showUsernamePasswordError}">
+                    <label class="control-label" for="fu-login-password">Password</label>
+                    <div class="controls">
+                        <input type="password" id="fu-login-password" data-ng-model="password" class="span12">
+                    </div>
+                </div>
+                <span class="help-inline" data-ng-show="showUsernamePasswordError">* {{usernamePasswordErrorMessage}}</span>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button data-ng-click="close()" class="btn">Cancel</button>
+    <button data-ng-click="login()" class="btn btn-primary">Login</button>
+</div>

@@ -1,0 +1,28 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">LOGIN</a>
+
+            <div class="notices pull-right">
+                <form class="nav pull-right" action="" data-ng-hide="loggedIn">
+                    <input type="button" class="btn btn-link" value="Register" data-ng-click="register()">
+                    <input type="button" class="btn btn-link" value="Login" data-ng-click="login()">
+                </form>
+                <p class="navbar-text" data-ng-show="loggedIn">Welcome {{currentUsername}}&nbsp;&nbsp;&nbsp;<a href="#/" data-ng-click="logout()">Logout</a>&nbsp;&nbsp;</p>
+            </div>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li data-ng-repeat="menu in menus" class="{{menu.class}}">
+                        <a href="#{{menu.url}}">{{menu.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
